@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React from 'react';
 import { Grid } from 'semantic-ui-react';
 import ActivityList from './ActivityList';
 import {observer} from 'mobx-react-lite';
