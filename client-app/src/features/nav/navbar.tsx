@@ -14,7 +14,7 @@ const NavBar: React.FC = () => {
         </Menu.Item>
         <Menu.Item name="Activities" as={NavLink} to='/activities'/>
         <Menu.Item>
-            <Button positive content='Create Activity' as={NavLink} to='createForm'></Button>
+            <Button positive content='Create Activity' as={NavLink} to='createActivity'></Button>
         </Menu.Item>
       </Container>
     </Menu>
