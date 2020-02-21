@@ -10,16 +10,7 @@ using Persistence;
 namespace Application.Activities {
     public class Create {
         public class Command : IRequest {
-            public Command (Guid id, string title, string description, string category, DateTime date, string city, string venue) {
-                this.Id = id;
-                this.Title = title;
-                this.Description = description;
-                this.Category = category;
-                this.Date = date;
-                this.City = city;
-                this.Venue = venue;
-
-            }
+            
             public Guid Id { get; set; }
             public string Title { get; set; }
             public string Description { get; set; }
@@ -29,16 +20,14 @@ namespace Application.Activities {
             public string Venue { get; set; }
         }
 
-        public class CommandValidator : AbstractValidator<Command>
-        {
-            public CommandValidator()
-            {
-                RuleFor(x => x.Title).NotEmpty();
-                RuleFor(x => x.Description).NotEmpty();
-                RuleFor(x => x.Category).NotEmpty();
-                RuleFor(x => x.Date).NotEmpty();
-                RuleFor(x => x.City).NotEmpty();
-                RuleFor(x => x.Venue).NotEmpty();
+        public class CommandValidator : AbstractValidator<Command> {
+            public CommandValidator () {
+                RuleFor (x => x.Title).NotEmpty ();
+                RuleFor (x => x.Description).NotEmpty ();
+                RuleFor (x => x.Category).NotEmpty ();
+                RuleFor (x => x.Date).NotEmpty ();
+                RuleFor (x => x.City).NotEmpty ();
+                RuleFor (x => x.Venue).NotEmpty ();
             }
         }
 
